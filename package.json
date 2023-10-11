@@ -1,0 +1,27 @@
+{
+    "name": "planner-types",
+    "version": "1.0.0",
+    "description": "Shared types for BG3 Character Planner front end and back end",
+    "main": "src/index.ts",
+    "scripts": {
+        "prepare": "husky install",
+        "lint": "eslint . --ext .ts,.tsx",
+        "lint-fix": "eslint . --ext .ts,.tsx --fix",
+        "format": "prettier --write .",
+        "type-check": "tsc --noEmit --skipLibCheck"
+    },
+    "author": "Jorgen Swiderski",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.8.2",
+        "@typescript-eslint/eslint-plugin": "^6.7.4",
+        "@typescript-eslint/parser": "^6.7.4",
+        "eslint": "^8.50.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^14.0.1",
+        "prettier": "^3.0.3",
+        "typescript": "^5.2.2"
+    }
+}
