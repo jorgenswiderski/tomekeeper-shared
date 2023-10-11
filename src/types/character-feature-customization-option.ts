@@ -1,3 +1,5 @@
+import { GrantableEffect } from './grantable-effect';
+
 export enum CharacterPlannerStep {
     SET_CLASS = 'SET_CLASS',
     SET_RACE = 'SET_RACE',
@@ -12,7 +14,8 @@ export enum CharacterPlannerStep {
 export interface ICharacterFeatureCustomizationOption {
     name: string;
     description?: string;
-    choices?: ICharacterFeatureCustomizationOption[][];
     image?: string;
     choiceType?: CharacterPlannerStep;
+    choices?: ICharacterFeatureCustomizationOption[][];
+    grants?: GrantableEffect[];
 }
