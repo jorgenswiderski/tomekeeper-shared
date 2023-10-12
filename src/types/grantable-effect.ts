@@ -9,6 +9,7 @@ export interface GrantableEffect {
     description?: string;
     hidden?: boolean;
     type: GrantableEffectType;
+    image?: string;
 }
 
 export enum ProficiencyTypes {
