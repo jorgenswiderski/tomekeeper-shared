@@ -15,7 +15,9 @@ export interface ICharacterFeatureCustomizationOption {
     name: string;
     description?: string;
     image?: string;
+    type?: CharacterPlannerStep;
+    grants?: GrantableEffect[];
+
     choiceType?: CharacterPlannerStep;
     choices?: ICharacterFeatureCustomizationOption[][];
-    grants?: GrantableEffect[];
 }
