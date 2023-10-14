@@ -4,12 +4,21 @@ export enum GrantableEffectType {
     PROFICIENCY = 'PROFICIENCY',
 }
 
+export enum GrantableEffectSubtype {
+    EFFECT_NONE,
+    ABILITY_BASE,
+    ABILITY_RACIAL,
+}
+
 export interface GrantableEffect {
     name: string;
     description?: string;
     hidden?: boolean;
     type: GrantableEffectType;
+    subtype?: GrantableEffectSubtype;
     image?: string;
+    grants?: GrantableEffect[];
+    values?: any;
 }
 
 export enum ProficiencyTypes {
