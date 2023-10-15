@@ -12,6 +12,7 @@ export enum CharacterPlannerStep {
     SUBCLASS_FEATURE = 'SUBCLASS_FEATURE',
     FEAT = 'FEAT',
     FEAT_SUBCHOICE = 'FEAT_SUBCHOICE',
+    FEAT_ABILITY_SCORES = 'FEAT_ABILITY_SCORES',
 }
 
 export interface ICharacterFeatureCustomizationOption {

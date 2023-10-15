@@ -8,6 +8,7 @@ export enum GrantableEffectSubtype {
     EFFECT_NONE,
     ABILITY_BASE,
     ABILITY_RACIAL,
+    ABILITY_FEAT,
 }
 
 export interface GrantableEffect {
