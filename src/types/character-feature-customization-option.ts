@@ -9,6 +9,7 @@ export enum CharacterPlannerStep {
     MULTICLASS = 'MULTICLASS',
     CHOOSE_SUBRACE = 'CHOOSE_SUBRACE',
     CHOOSE_SUBCLASS = 'CHOOSE_SUBCLASS',
+    SUBCLASS_FEATURE = 'SUBCLASS_FEATURE',
 }
 
 export interface ICharacterFeatureCustomizationOption {
