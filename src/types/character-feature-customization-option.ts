@@ -14,11 +14,14 @@ export enum CharacterPlannerStep {
     FEAT = 'FEAT',
     FEAT_SUBCHOICE = 'FEAT_SUBCHOICE',
     FEAT_ABILITY_SCORES = 'FEAT_ABILITY_SCORES',
+    LEARN_CANTRIPS = 'LEARN_CANTRIPS',
+    LEARN_SPELLS = 'LEARN_SPELLS',
 }
 
 export type ICharacterChoice = {
     type: CharacterPlannerStep;
     options: ICharacterOption[];
+    count?: number;
 };
 
 export interface ICharacterOption {
