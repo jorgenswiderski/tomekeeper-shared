@@ -6,6 +6,7 @@ export enum CharacterPlannerStep {
     SET_BACKGROUND = 'SET_BACKGROUND',
     SET_ABILITY_SCORES = 'SET_ABILITY_SCORES',
     LEVEL_UP = 'LEVEL_UP',
+    MULTICLASS_ROOT = 'MULTICLASS_ROOT',
     MULTICLASS = 'MULTICLASS',
     CHOOSE_SUBRACE = 'CHOOSE_SUBRACE',
     CHOOSE_SUBCLASS = 'CHOOSE_SUBCLASS',
@@ -15,13 +16,16 @@ export enum CharacterPlannerStep {
     FEAT_ABILITY_SCORES = 'FEAT_ABILITY_SCORES',
 }
 
-export interface ICharacterFeatureCustomizationOption {
+export type ICharacterChoice = {
+    type: CharacterPlannerStep;
+    options: ICharacterOption[];
+};
+
+export interface ICharacterOption {
     name: string;
     description?: string;
     image?: string;
     type?: CharacterPlannerStep;
     grants?: GrantableEffect[];
-
-    choiceType?: CharacterPlannerStep;
-    choices?: ICharacterFeatureCustomizationOption[][];
+    choices?: ICharacterChoice[];
 }
