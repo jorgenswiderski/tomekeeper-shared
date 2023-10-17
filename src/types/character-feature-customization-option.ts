@@ -1,4 +1,9 @@
-import { GrantableEffect } from './grantable-effect';
+import {
+    ActionEffect,
+    Characteristic,
+    GrantableEffect,
+    Proficiency,
+} from './grantable-effect';
 
 export enum CharacterPlannerStep {
     SET_CLASS = 'SET_CLASS',
@@ -29,6 +34,6 @@ export interface ICharacterOption {
     description?: string;
     image?: string;
     type?: CharacterPlannerStep;
-    grants?: GrantableEffect[];
+    grants?: (GrantableEffect | Characteristic | ActionEffect | Proficiency)[];
     choices?: ICharacterChoice[];
 }

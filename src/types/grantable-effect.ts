@@ -4,22 +4,13 @@ export enum GrantableEffectType {
     PROFICIENCY = 'PROFICIENCY',
 }
 
-export enum GrantableEffectSubtype {
-    EFFECT_NONE,
-    ABILITY_BASE,
-    ABILITY_RACIAL,
-    ABILITY_FEAT,
-}
-
 export interface GrantableEffect {
     name: string;
     description?: string;
     hidden?: boolean;
     type: GrantableEffectType;
-    subtype?: GrantableEffectSubtype;
     image?: string;
     grants?: GrantableEffect[];
-    values?: any;
 }
 
 export enum ProficiencyTypes {
@@ -45,9 +36,27 @@ export interface Proficiency extends GrantableEffect {
     proficiency: ProficiencyTypes;
 }
 
-export enum CharacteristicEffect {}
+export enum CharacteristicType {
+    EFFECT_NONE,
+    ABILITY_BASE,
+    ABILITY_RACIAL,
+    ABILITY_FEAT,
+}
 
 export interface Characteristic extends GrantableEffect {
     type: GrantableEffectType.CHARACTERISTIC;
-    effects?: CharacteristicEffect[];
+    subtype?: CharacteristicType;
+    values?: any;
+}
+
+export enum ActionEffectType {
+    ACTION_NONE,
+    CLASS_ACTION,
+    RACIAL_ACTION,
+    SPELL_ACTION,
+}
+
+export interface ActionEffect extends GrantableEffect {
+    type: GrantableEffectType.ACTION;
+    subtype: ActionEffectType;
 }
