@@ -22,6 +22,7 @@ export enum CharacterPlannerStep {
     LEARN_CANTRIPS = 'LEARN_CANTRIPS',
     LEARN_SPELLS = 'LEARN_SPELLS',
     REMOVE_LEVEL = 'REMOVE_LEVEL',
+    MANAGE_LEVELS = 'MANAGE_LEVELS',
 }
 
 export type ICharacterChoice = {
