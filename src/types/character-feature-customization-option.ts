@@ -24,6 +24,8 @@ export enum CharacterPlannerStep {
     REMOVE_LEVEL = 'REMOVE_LEVEL',
     MANAGE_LEVELS = 'MANAGE_LEVELS',
     REVISE_LEVEL = 'REVISE_LEVEL',
+    STOP_LEVEL_MANAGEMENT = 'STOP_LEVEL_MANAGEMENT',
+    CHANGE_PRIMARY_CLASS = 'CHANGE_PRIMARY_CLASS',
 }
 
 export type ICharacterChoice = {
