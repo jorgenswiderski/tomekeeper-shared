@@ -14,21 +14,22 @@ export interface ISpell {
 }
 
 export enum SpellSchool {
-    NONE = 'NONE',
-    ABJURATION = 'ABJURATION',
-    CONJURATION = 'CONJURATION',
-    DIVINATION = 'DIVINATION',
-    ENCHANTMENT = 'ENCHANTMENT',
-    EVOCATION = 'EVOCATION',
-    ILLUSION = 'ILLUSION',
-    NECROMANCY = 'NECROMANCY',
-    TRANSMUTATION = 'TRANSMUTATION',
+    NONE,
+    Abjuration,
+    Conjuration,
+    Divination,
+    Enchantment,
+    Evocation,
+    Illusion,
+    Necromancy,
+    Transmutation,
+    'Class Action',
 }
 
 export enum ActionType {
     NONE,
-    ACTION = 'ACTION',
-    BONUS = 'BONUS',
-    REACTION = 'REACTION',
-    BOTH = 'BOTH',
+    action,
+    bonus,
+    reaction,
+    both,
 }
