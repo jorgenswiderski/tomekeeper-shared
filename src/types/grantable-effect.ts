@@ -1,7 +1,8 @@
 export enum GrantableEffectType {
-    ACTION = 'ACTION',
-    CHARACTERISTIC = 'CHARACTERISTIC',
-    PROFICIENCY = 'PROFICIENCY',
+    NONE,
+    ACTION,
+    CHARACTERISTIC,
+    PROFICIENCY,
 }
 
 export interface GrantableEffect {
@@ -56,7 +57,8 @@ export enum ActionEffectType {
     SPELL_ACTION,
 }
 
-export interface ActionEffect extends GrantableEffect {
+export interface IActionEffect extends GrantableEffect {
     type: GrantableEffectType.ACTION;
     subtype: ActionEffectType;
+    id: number;
 }

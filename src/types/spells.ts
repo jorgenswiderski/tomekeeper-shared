@@ -11,6 +11,7 @@ export interface ISpell {
     actionType: ActionType;
     concentration: boolean;
     noSpellSlot: boolean;
+    id: number;
 }
 
 export enum SpellSchool {
