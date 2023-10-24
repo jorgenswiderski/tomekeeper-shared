@@ -159,3 +159,69 @@ export interface IEquipmentItem {
     notes: string[];
     id: number;
 }
+
+export enum WeaponCategory {
+    NONE,
+    martial = 1,
+    Martial = 1,
+    simple = 2,
+    Simple = 2,
+}
+
+export enum WeaponRangeType {
+    NONE,
+    melee,
+    ranged,
+}
+
+export enum WeaponHandedness {
+    NONE,
+    'one-handed',
+    versatile,
+    'two-handed',
+}
+
+export enum DamageType {
+    NONE,
+    Slashing,
+    Piercing,
+    Bludgeoning,
+    Fire,
+    Cold,
+    Lightning,
+    Thunder,
+    Acid,
+    Poison,
+    Radiant,
+    Necrotic,
+    Force,
+    Psychic,
+}
+
+export enum WeaponRange {
+    melee,
+    normal,
+    short,
+    special,
+}
+
+export interface IWeaponItem extends IEquipmentItem {
+    category: WeaponCategory;
+    rangeType: WeaponRangeType;
+    handedness: WeaponHandedness;
+    damage: string;
+    damageType: DamageType;
+    damageVersatile?: string;
+    extraDamage?: string;
+    extraDamage2?: string;
+    range: WeaponRange;
+    finesse: boolean;
+    heavy: boolean;
+    light: boolean;
+    reach: boolean;
+    thrown: boolean;
+    cantDualWield: boolean;
+    dippable: boolean;
+    // weaponActions: IActionEffect[];
+    // special: IActionEffect[];
+}
