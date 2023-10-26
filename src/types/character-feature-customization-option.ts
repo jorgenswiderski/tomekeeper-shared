@@ -1,3 +1,4 @@
+import { StaticallyReferenceable } from '../models/static-reference/types';
 import {
     IActionEffect,
     Characteristic,
@@ -30,17 +31,37 @@ export enum CharacterPlannerStep {
     EQUIP_ITEM,
 }
 
+export type ICharacterChoiceWithStubs = {
+    type: CharacterPlannerStep;
+    options: ICharacterOptionWithStubs[];
+    count?: number;
+};
+
 export type ICharacterChoice = {
     type: CharacterPlannerStep;
     options: ICharacterOption[];
     count?: number;
 };
 
-export interface ICharacterOption {
+interface ICharacterOptionBase {
     name: string;
     description?: string;
     image?: string;
     type?: CharacterPlannerStep;
+}
+
+export interface ICharacterOption extends ICharacterOptionBase {
     grants?: (GrantableEffect | Characteristic | IActionEffect | Proficiency)[];
     choices?: ICharacterChoice[];
+}
+
+export interface ICharacterOptionWithStubs extends ICharacterOptionBase {
+    grants?: (
+        | GrantableEffect
+        | Characteristic
+        | IActionEffect
+        | Proficiency
+        | StaticallyReferenceable
+    )[];
+    choices?: ICharacterChoiceWithStubs[];
 }

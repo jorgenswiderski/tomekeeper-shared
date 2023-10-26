@@ -1,4 +1,3 @@
-import assert from 'assert';
 import {
     StaticReferenceHandle,
     StaticReferenceIdentifier,
@@ -30,7 +29,7 @@ export class StaticReference {
             );
         }
 
-        assert(typeof (Class as any).fromId === 'function');
+        // assert(typeof (Class as any).fromId === 'function');
         const pool = new Map<number, any>();
 
         StaticReference.classes[identifier] = {
@@ -64,6 +63,12 @@ export class StaticReference {
         const identifier = match[1];
         const id = parseInt(match[2], 10);
         const info = StaticReference.classes[identifier];
+
+        if (!info?.pool) {
+            throw new Error(
+                `Cannot find static reference pool for id '${identifier}'`,
+            );
+        }
 
         if (info.pool.has(id)) {
             return info.pool.get(id);
