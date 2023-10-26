@@ -1,3 +1,5 @@
+import { IAction } from './action';
+
 export enum GrantableEffectType {
     NONE,
     ACTION,
@@ -59,6 +61,7 @@ export enum ActionEffectType {
 
 export interface IActionEffect extends GrantableEffect {
     type: GrantableEffectType.ACTION;
-    subtype: ActionEffectType;
+    subtype: ActionEffectType; // FIXME
     id: number;
+    action: IAction;
 }

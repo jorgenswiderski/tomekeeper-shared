@@ -1,5 +1,5 @@
 import { AbilityScore } from './ability';
-import { DamageType } from './equipment-item';
+import { DamageType } from './damage';
 
 export enum ActionAreaOfEffectType {
     NONE,
@@ -39,7 +39,8 @@ export enum ActionRangeType {
 
 export interface IActionBase {
     name: string;
-    damage?: string;
+
+    damage?: string; // FIXME, these aren't parsed properly for Action
     damageType?: DamageType;
     extraDamage?: string;
     extraDamageType?: DamageType;
@@ -114,7 +115,8 @@ export interface ISpell extends IActionBase {
     damageSaveEffect?: ActionDamageSaveEffect;
     damagePer?: string;
     higherLevels?: string;
-    variants?: string[];
+    variants?: ISpell[];
+    isVariant: boolean;
 }
 
 export enum ActionSchool {

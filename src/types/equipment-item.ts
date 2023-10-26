@@ -1,3 +1,4 @@
+import { DamageType } from './damage';
 import { GrantableEffect } from './grantable-effect';
 
 export enum EquipmentItemType {
@@ -179,23 +180,6 @@ export enum WeaponHandedness {
     'one-handed',
     versatile,
     'two-handed',
-}
-
-export enum DamageType {
-    NONE,
-    Slashing,
-    Piercing,
-    Bludgeoning,
-    Fire,
-    Cold,
-    Lightning,
-    Thunder,
-    Acid,
-    Poison,
-    Radiant,
-    Necrotic,
-    Force,
-    Psychic,
 }
 
 export enum WeaponRange {
