@@ -41,6 +41,7 @@ export type ICharacterChoice = {
     type: CharacterPlannerStep;
     options: ICharacterOption[];
     count?: number;
+    forcedOptions?: ICharacterOption[];
 };
 
 interface ICharacterOptionBase {

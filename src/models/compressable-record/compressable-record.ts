@@ -31,16 +31,20 @@ export class RecordCompressor {
         return RecordCompressor.createReferenceFactory(identifier);
     }
 
-    static parseValue(
+    static async parseValue(
         identifier: CompressableRecordIdentifier,
         ...args: any[]
-    ): any {
+    ): Promise<any> {
         const info = RecordCompressor.classes.get(identifier);
 
         if (!info) {
             throw new Error(
                 `Compressor with identifier ${identifier} is not defined`,
             );
+        }
+
+        if ((info.Class as any).decompress) {
+            return (info.Class as any).decompress(...args);
         }
 
         return new info.Class(...args);
