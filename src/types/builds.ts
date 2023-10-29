@@ -9,4 +9,7 @@ export interface Build {
 export interface BuildWithInfo extends Build {
     createdUtc: number;
     hits: number;
+    lastAccessedUtc: number;
+    lastModifiedUtc: number;
+    ip: string;
 }
