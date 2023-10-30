@@ -1,7 +1,11 @@
 {
-    "name": "planner-types",
+    "name": "@jorgenswiderski/tomekeeper-shared",
     "version": "1.0.0",
-    "description": "Shared types for BG3 Character Planner front end and back end",
+    "description": "Shared types for Tomekeeper front end and back end",
+    "repository": "github:jorgenswiderski/planner-types",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "main": "src/index.ts",
     "scripts": {
         "prepare": "husky install",
