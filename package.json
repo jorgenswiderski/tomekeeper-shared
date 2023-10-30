@@ -14,7 +14,8 @@
         "lint-fix": "eslint . --ext .ts,.tsx --fix --ignore-pattern dist/",
         "format": "prettier --write '**/*.{ts,tsx,js,jsx,json}' --ignore-path .eslintignore",
         "type-check": "tsc --noEmit --skipLibCheck",
-        "build": "tsc"
+        "build": "tsc",
+        "watch": "chokidar \"src/**/*.ts\" -c \"npm run build\""
     },
     "author": "Jorgen Swiderski",
     "license": "MIT",
@@ -22,12 +23,13 @@
         "@types/node": "^20.8.2",
         "@typescript-eslint/eslint-plugin": "^6.7.4",
         "@typescript-eslint/parser": "^6.7.4",
+        "chokidar-cli": "^3.0.0",
         "eslint": "^8.50.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^17.1.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.0",
-        "husky": "^8.0.0",
+        "husky": "^8.0.3",
         "lint-staged": "^14.0.1",
         "prettier": "^3.0.3",
         "typescript": "^5.2.2"
