@@ -1,8 +1,8 @@
 {
     "name": "@jorgenswiderski/tomekeeper-shared",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Shared types for Tomekeeper front end and back end",
-    "repository": "github:jorgenswiderski/planner-types",
+    "repository": "https://github.com/jorgenswiderski/tomekeeper-shared.git",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/"
     },
