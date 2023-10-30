@@ -1,18 +1,19 @@
 {
     "name": "@jorgenswiderski/tomekeeper-shared",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Shared types for Tomekeeper front end and back end",
     "repository": "https://github.com/jorgenswiderski/tomekeeper-shared.git",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/"
     },
-    "main": "src/index.ts",
+    "main": "dist/index.js",
     "scripts": {
         "prepare": "husky install",
-        "lint": "eslint . --ext .ts,.tsx",
-        "lint-fix": "eslint . --ext .ts,.tsx --fix",
-        "format": "prettier --write .",
-        "type-check": "tsc --noEmit --skipLibCheck"
+        "lint": "eslint . --ext .ts,.tsx --ignore-pattern dist/",
+        "lint-fix": "eslint . --ext .ts,.tsx --fix --ignore-pattern dist/",
+        "format": "prettier --write '**/*.{ts,tsx,js,jsx,json}' --ignore-path .eslintignore",
+        "type-check": "tsc --noEmit --skipLibCheck",
+        "build": "tsc"
     },
     "author": "Jorgen Swiderski",
     "license": "MIT",
