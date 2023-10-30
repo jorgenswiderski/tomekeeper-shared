@@ -1,12 +1,13 @@
 {
     "name": "@jorgenswiderski/tomekeeper-shared",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Shared types for Tomekeeper front end and back end",
     "repository": "https://github.com/jorgenswiderski/tomekeeper-shared.git",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/"
     },
     "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "prepare": "husky install",
         "lint": "eslint . --ext .ts,.tsx --ignore-pattern dist/",
