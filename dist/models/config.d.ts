@@ -1,3 +1,1 @@
-export declare const CONFIG: {
-    IS_DEV: boolean;
-};
+export declare const CONFIG: {};
