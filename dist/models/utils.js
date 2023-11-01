@@ -17,7 +17,10 @@ class SharedUtils {
     static getMediaWikiImagePath(imageName, includeFileName = true) {
         const formattedImageName = this.getEncodedImageName(imageName);
         const hash = crypto_js_1.default.MD5(formattedImageName).toString(crypto_js_1.default.enc.Hex);
-        return `/media-wiki-assets/${hash[0]}/${hash[0]}${hash[1]}${includeFileName ? `/${imageName}` : ''}`;
+        // return `/media-wiki-assets/${hash[0]}/${hash[0]}${hash[1]}${
+        //     includeFileName ? `/${imageName}` : ''
+        // }`;
+        return `/${hash[0]}/${hash[0]}${hash[1]}${includeFileName ? `/${imageName}` : ''}`;
     }
 }
 exports.SharedUtils = SharedUtils;

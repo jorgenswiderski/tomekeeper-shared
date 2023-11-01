@@ -22,7 +22,11 @@ export class SharedUtils {
             CryptoJS.enc.Hex,
         );
 
-        return `/media-wiki-assets/${hash[0]}/${hash[0]}${hash[1]}${
+        // return `/media-wiki-assets/${hash[0]}/${hash[0]}${hash[1]}${
+        //     includeFileName ? `/${imageName}` : ''
+        // }`;
+
+        return `/${hash[0]}/${hash[0]}${hash[1]}${
             includeFileName ? `/${imageName}` : ''
         }`;
     }
