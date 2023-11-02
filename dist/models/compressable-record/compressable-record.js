@@ -4,7 +4,12 @@ exports.RecordCompressor = void 0;
 class RecordCompressor {
     static registerClass(Class, identifier) {
         if (RecordCompressor.classes.has(identifier)) {
-            throw new Error(`Compressable record conflict between ${RecordCompressor.classes.get(identifier).Class.name} and ${Class.name}`);
+            const registeredClass = RecordCompressor.classes.get(identifier);
+            // Sometimes the class may get registered again when the app hot reloads, so let's handle that gracefully.
+            if (registeredClass.Class.name === Class.name) {
+                return RecordCompressor.createReferenceFactory(identifier);
+            }
+            throw new Error(`Reference conflict between ${registeredClass.Class.name} and ${Class.name}`);
         }
         RecordCompressor.classes.set(identifier, {
             Class,

@@ -17,10 +17,15 @@ export class RecordCompressor {
         identifier: CompressableRecordIdentifier,
     ): (...args: any[]) => CompressableRecordHandle {
         if (RecordCompressor.classes.has(identifier)) {
+            const registeredClass = RecordCompressor.classes.get(identifier)!;
+
+            // Sometimes the class may get registered again when the app hot reloads, so let's handle that gracefully.
+            if (registeredClass.Class.name === Class.name) {
+                return RecordCompressor.createReferenceFactory(identifier);
+            }
+
             throw new Error(
-                `Compressable record conflict between ${
-                    RecordCompressor.classes.get(identifier)!.Class.name
-                } and ${Class.name}`,
+                `Reference conflict between ${registeredClass.Class.name} and ${Class.name}`,
             );
         }
 
