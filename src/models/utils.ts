@@ -18,6 +18,7 @@ export class SharedUtils {
         includeFileName: boolean = true,
     ): string {
         const formattedImageName = this.getEncodedImageName(imageName);
+
         const hash = CryptoJS.MD5(formattedImageName).toString(
             CryptoJS.enc.Hex,
         );
