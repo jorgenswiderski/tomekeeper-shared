@@ -4,7 +4,15 @@ exports.StaticReference = void 0;
 class StaticReference {
     static registerClass(Class, identifier) {
         if (StaticReference.classes[identifier]) {
-            throw new Error(`Reference conflict between ${StaticReference.classes[identifier].Class.name} and ${Class.name}`);
+            const registeredClass = StaticReference.classes[identifier];
+            // Sometimes the class may get registered again when the app hot reloads, so let's handle that gracefully.
+            if (registeredClass.Class.name === Class.name) {
+                return {
+                    pool: registeredClass.pool,
+                    create: StaticReference.createReferenceFactory(identifier),
+                };
+            }
+            throw new Error(`Reference conflict between ${registeredClass.Class.name} and ${Class.name}`);
         }
         // assert(typeof (Class as any).fromId === 'function');
         const pool = new Map();

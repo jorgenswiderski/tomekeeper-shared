@@ -24,8 +24,18 @@ export class StaticReference {
         create: (id: number) => StaticReferenceHandle;
     } {
         if (StaticReference.classes[identifier]) {
+            const registeredClass = StaticReference.classes[identifier];
+
+            // Sometimes the class may get registered again when the app hot reloads, so let's handle that gracefully.
+            if (registeredClass.Class.name === Class.name) {
+                return {
+                    pool: registeredClass.pool,
+                    create: StaticReference.createReferenceFactory(identifier),
+                };
+            }
+
             throw new Error(
-                `Reference conflict between ${StaticReference.classes[identifier].Class.name} and ${Class.name}`,
+                `Reference conflict between ${registeredClass.Class.name} and ${Class.name}`,
             );
         }
 
