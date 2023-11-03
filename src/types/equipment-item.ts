@@ -185,7 +185,7 @@ export interface IEquipmentItem {
     uid?: string;
     effects: GrantableEffect[];
     source?: string;
-    notes: string[];
+    // notes: string[];
     id: number;
 }
 

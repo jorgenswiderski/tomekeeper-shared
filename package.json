@@ -1,6 +1,6 @@
 {
     "name": "@jorgenswiderski/tomekeeper-shared",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "Shared types for Tomekeeper front end and back end",
     "repository": "https://github.com/jorgenswiderski/tomekeeper-shared.git",
     "publishConfig": {

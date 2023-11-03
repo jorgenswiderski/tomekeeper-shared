@@ -77,7 +77,7 @@ export interface IActionBase {
     areaTurnEndDamageType?: DamageType;
     areaTurnEndDamageSave?: AbilityScore;
     areaTurnEndDamageSaveEffect?: ActionDamageSaveEffect;
-    notes?: string;
+    // notes?: string;
     recharge?: ActionRechargeFrequency;
     cost?: ActionResource;
 }

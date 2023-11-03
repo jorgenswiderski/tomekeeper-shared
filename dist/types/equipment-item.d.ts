@@ -96,7 +96,6 @@ export interface IEquipmentItem {
     uid?: string;
     effects: GrantableEffect[];
     source?: string;
-    notes: string[];
     id: number;
 }
 export declare enum WeaponCategory {
