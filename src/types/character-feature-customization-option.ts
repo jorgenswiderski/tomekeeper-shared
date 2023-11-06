@@ -1,4 +1,4 @@
-import { CompressableRecord } from '../models/compressable-record/types';
+import { StaticallyReferenceable } from '../models/static-reference/types';
 import {
     IActionEffect,
     Characteristic,
@@ -62,7 +62,7 @@ export interface ICharacterOptionWithStubs extends ICharacterOptionBase {
         | Characteristic
         | IActionEffect
         | Proficiency
-        | CompressableRecord
+        | StaticallyReferenceable
     )[];
     choices?: ICharacterChoiceWithStubs[];
 }

@@ -1,4 +1,4 @@
-import { CompressableRecord } from '../models/compressable-record/types';
+import { StaticallyReferenceable } from '../models/static-reference/types';
 import { IActionEffect, Characteristic, GrantableEffect, Proficiency } from './grantable-effect';
 export declare enum CharacterPlannerStep {
     NONE = 0,
@@ -46,7 +46,7 @@ export interface ICharacterOption extends ICharacterOptionBase {
     choices?: ICharacterChoice[];
 }
 export interface ICharacterOptionWithStubs extends ICharacterOptionBase {
-    grants?: (GrantableEffect | Characteristic | IActionEffect | Proficiency | CompressableRecord)[];
+    grants?: (GrantableEffect | Characteristic | IActionEffect | Proficiency | StaticallyReferenceable)[];
     choices?: ICharacterChoiceWithStubs[];
 }
 export {};

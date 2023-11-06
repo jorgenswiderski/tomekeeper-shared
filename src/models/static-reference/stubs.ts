@@ -1,5 +1,4 @@
 import { IAction, ISpell } from '../../types/action';
-import { IActionEffect } from '../../types/grantable-effect';
 import { CompressableRecord } from '../compressable-record/types';
 import { StaticallyReferenceable } from './types';
 
@@ -20,7 +19,12 @@ export type ActionStubConstructor = new (
     choiceId: string,
 ) => ActionStub;
 
+interface SpellEffectStub extends StaticallyReferenceable {}
+export type SpellEffectStubConstructor = new (
+    action: ISpell,
+) => SpellEffectStub;
+
 interface ActionEffectStub extends StaticallyReferenceable {}
 export type ActionEffectStubConstructor = new (
-    effect: IActionEffect,
+    action: IAction,
 ) => ActionEffectStub;
