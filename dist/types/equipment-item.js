@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WeaponRange = exports.WeaponHandedness = exports.WeaponRangeType = exports.WeaponCategory = exports.ItemRarity = exports.EquipmentItemProficiency = exports.equipmentSlotTypes = exports.EquipmentSlot = exports.EquipmentItemType = void 0;
+exports.WeaponRange = exports.WeaponHandedness = exports.WeaponRangeType = exports.WeaponCategory = exports.ItemRarity = exports.EquipmentItemProficiency = exports.equipmentSlotTypes = exports.equipmentSlotLabels = exports.EquipmentSlot = exports.EquipmentItemType = void 0;
 var EquipmentItemType;
 (function (EquipmentItemType) {
     EquipmentItemType[EquipmentItemType["NONE"] = 0] = "NONE";
@@ -64,6 +64,20 @@ var EquipmentSlot;
     EquipmentSlot[EquipmentSlot["RangedMainhand"] = 10] = "RangedMainhand";
     EquipmentSlot[EquipmentSlot["RangedOffhand"] = 11] = "RangedOffhand";
 })(EquipmentSlot || (exports.EquipmentSlot = EquipmentSlot = {}));
+exports.equipmentSlotLabels = {
+    [EquipmentSlot.Head]: 'Head',
+    [EquipmentSlot.Body]: 'Body',
+    [EquipmentSlot.Hands]: 'Hands',
+    [EquipmentSlot.Feet]: 'Feet',
+    [EquipmentSlot.Back]: 'Back',
+    [EquipmentSlot.Amulet]: 'Amulet',
+    [EquipmentSlot.Ring1]: 'Ring',
+    [EquipmentSlot.Ring2]: 'Ring',
+    [EquipmentSlot.MeleeMainhand]: 'Melee MH',
+    [EquipmentSlot.MeleeOffhand]: 'Melee OH',
+    [EquipmentSlot.RangedMainhand]: 'Ranged MH',
+    [EquipmentSlot.RangedOffhand]: 'Ranged OH',
+};
 exports.equipmentSlotTypes = {
     [EquipmentSlot.Head]: [EquipmentItemType.Helmets],
     [EquipmentSlot.Body]: [

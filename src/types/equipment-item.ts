@@ -68,6 +68,21 @@ export enum EquipmentSlot {
     RangedOffhand,
 }
 
+export const equipmentSlotLabels: Record<EquipmentSlot, string> = {
+    [EquipmentSlot.Head]: 'Head',
+    [EquipmentSlot.Body]: 'Body',
+    [EquipmentSlot.Hands]: 'Hands',
+    [EquipmentSlot.Feet]: 'Feet',
+    [EquipmentSlot.Back]: 'Back',
+    [EquipmentSlot.Amulet]: 'Amulet',
+    [EquipmentSlot.Ring1]: 'Ring',
+    [EquipmentSlot.Ring2]: 'Ring',
+    [EquipmentSlot.MeleeMainhand]: 'Melee MH',
+    [EquipmentSlot.MeleeOffhand]: 'Melee OH',
+    [EquipmentSlot.RangedMainhand]: 'Ranged MH',
+    [EquipmentSlot.RangedOffhand]: 'Ranged OH',
+};
+
 export const equipmentSlotTypes: Record<EquipmentSlot, EquipmentItemType[]> = {
     [EquipmentSlot.Head]: [EquipmentItemType.Helmets],
     [EquipmentSlot.Body]: [

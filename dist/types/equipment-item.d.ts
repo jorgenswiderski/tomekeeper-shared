@@ -61,6 +61,7 @@ export declare enum EquipmentSlot {
     RangedMainhand = 10,
     RangedOffhand = 11
 }
+export declare const equipmentSlotLabels: Record<EquipmentSlot, string>;
 export declare const equipmentSlotTypes: Record<EquipmentSlot, EquipmentItemType[]>;
 export declare enum EquipmentItemProficiency {
     NONE = 0,
