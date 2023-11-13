@@ -1,5 +1,6 @@
 import { DamageType } from './damage';
 import { GrantableEffect } from './grantable-effect';
+import { ItemSource } from './item-sources';
 export declare enum EquipmentItemType {
     NONE = 0,
     Amulets = 1,
@@ -96,7 +97,7 @@ export interface IEquipmentItem {
     price?: number;
     uid?: string;
     effects: GrantableEffect[];
-    source?: string;
+    sources?: ItemSource[];
     id: number;
 }
 export declare enum WeaponCategory {

@@ -6,3 +6,4 @@ package
 .next
 *.tsbuildinfo
 *.eslintcache
+package-lock.json
