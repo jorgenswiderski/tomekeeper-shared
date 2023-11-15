@@ -14,8 +14,9 @@
         "lint-fix": "eslint . --ext .ts,.tsx --fix --ignore-pattern dist/",
         "format": "prettier --write '**/*.{ts,tsx,js,jsx,json}' --ignore-path .eslintignore",
         "type-check": "tsc --noEmit --skipLibCheck",
-        "build": "tsc",
-        "watch": "chokidar \"src/**/*.ts\" -c \"npm run build\""
+        "build": "npm run clean && tsc",
+        "watch": "chokidar \"src/**/*.ts\" -c \"npm run build\"",
+        "clean": "rimraf ./dist"
     },
     "author": "Jorgen Swiderski",
     "license": "MIT",
@@ -33,6 +34,7 @@
         "husky": "^8.0.3",
         "lint-staged": "^14.0.1",
         "prettier": "^3.0.3",
+        "rimraf": "^5.0.5",
         "typescript": "^5.2.2"
     },
     "dependencies": {
