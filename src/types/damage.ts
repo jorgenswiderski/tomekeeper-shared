@@ -13,6 +13,10 @@ export enum DamageType {
     Necrotic,
     Force,
     Psychic,
+
+    // Special Types
+    Healing,
+    Physical,
 }
 
 export const damageTypeColor: Record<DamageType, string> = {
@@ -20,6 +24,7 @@ export const damageTypeColor: Record<DamageType, string> = {
     [DamageType.Slashing]: '#8c8c8c',
     [DamageType.Piercing]: '#8c8c8c',
     [DamageType.Bludgeoning]: '#8c8c8c',
+    [DamageType.Physical]: '#8c8c8c',
     [DamageType.Fire]: '#ee5500',
     [DamageType.Cold]: '#3399cc',
     [DamageType.Lightning]: '#3366cc',
@@ -30,4 +35,5 @@ export const damageTypeColor: Record<DamageType, string> = {
     [DamageType.Necrotic]: '#40b050',
     [DamageType.Force]: '#cc3333',
     [DamageType.Psychic]: '#cc77aa',
+    [DamageType.Healing]: '#30bbbb',
 };

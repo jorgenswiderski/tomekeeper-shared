@@ -12,6 +12,8 @@ export declare enum DamageType {
     Radiant = 10,
     Necrotic = 11,
     Force = 12,
-    Psychic = 13
+    Psychic = 13,
+    Healing = 14,
+    Physical = 15
 }
 export declare const damageTypeColor: Record<DamageType, string>;

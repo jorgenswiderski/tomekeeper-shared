@@ -5,19 +5,24 @@ export declare enum ActionAreaOfEffectType {
     radius = 1,
     cone = 2,
     cube = 3,
-    line = 4
+    line = 4,
+    sphere = 5
 }
 export declare enum ActionAreaShape {
     NONE = 0,
     Radius = 1,
     Cone = 2,
-    Cube = 3
+    Cube = 3,
+    Line = 4
 }
 export declare enum ActionRechargeFrequency {
     NONE = 0,
-    LongRest = 1,
-    ShortRest = 2,
-    PerCombat = 3
+    'Until Long Rest' = 1,
+    'Long Rest' = 1,
+    'Short Rest' = 2,
+    'Per Battle' = 3,
+    'Per Combat' = 3,
+    'Per Turn' = 4
 }
 export declare enum ActionAreaCategory {
     NONE = 0,
@@ -29,7 +34,13 @@ export declare enum ActionRangeType {
     NONE = 0,
     ranged = 1,
     melee = 2,
-    self = 3
+    self = 3,
+    weapon = 4
+}
+export interface ActionCost {
+    resource: ActionResource;
+    amount: number;
+    behavior?: ActionCostBehavior;
 }
 export interface IActionBase {
     name: string;
@@ -70,29 +81,44 @@ export interface IActionBase {
     areaTurnEndDamageSave?: AbilityScore;
     areaTurnEndDamageSaveEffect?: ActionDamageSaveEffect;
     recharge?: ActionRechargeFrequency;
-    cost?: ActionResource;
+    costs: ActionCost[];
+}
+export declare enum ActionCostBehavior {
+    NONE = 0,
+    onUse = 1,
+    onHit = 2
 }
 export declare enum ActionResource {
     NONE = 0,
     action = 1,
     bonus = 2,
-    both = 3,
-    reaction = 4,
-    freeaction = 5,
-    arcrec = 6,
-    barins = 7,
-    chadiv = 8,
-    chaoat = 9,
-    fnginf = 10,
-    layonh = 11,
-    natrec = 12,
-    rage = 13,
-    supdie = 14,
-    toc = 15,
-    warpri = 16,
-    wldshp = 17,
-    ki = 18
+    reaction = 3,
+    movement = 4,
+    movementHalf = 5,
+    arcaneRecovery = 6,
+    bardicInspiration = 7,
+    channelDivinity = 8,
+    channelOath = 9,
+    fungalInfestation = 10,
+    ki = 11,
+    spellSlot1 = 12,
+    spellSlot2 = 13,
+    spellSlot3 = 14,
+    spellSlot4 = 15,
+    spellSlot5 = 16,
+    spellSlot6 = 17,
+    layOnHands = 18,
+    naturalRecovery = 19,
+    rage = 20,
+    sorceryPoints = 21,
+    superiorityDice = 22,
+    warPriest = 23,
+    wildShape = 24,
+    tidesOfChaos = 25,
+    luckPoints = 26,
+    eyestalkAction = 27
 }
+export declare const ActionResourceFromString: Record<string, ActionResource>;
 export interface IAction extends IActionBase {
     condition2?: string;
     condition2Duration?: number;

@@ -3,11 +3,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AbilityScore = void 0;
 var AbilityScore;
 (function (AbilityScore) {
+    AbilityScore[AbilityScore["none"] = 0] = "none";
     AbilityScore[AbilityScore["NONE"] = 0] = "NONE";
+    AbilityScore[AbilityScore["STR"] = 1] = "STR";
     AbilityScore[AbilityScore["Strength"] = 1] = "Strength";
+    AbilityScore[AbilityScore["DEX"] = 2] = "DEX";
     AbilityScore[AbilityScore["Dexterity"] = 2] = "Dexterity";
+    AbilityScore[AbilityScore["CON"] = 3] = "CON";
     AbilityScore[AbilityScore["Constitution"] = 3] = "Constitution";
+    AbilityScore[AbilityScore["INT"] = 4] = "INT";
     AbilityScore[AbilityScore["Intelligence"] = 4] = "Intelligence";
+    AbilityScore[AbilityScore["WIS"] = 5] = "WIS";
     AbilityScore[AbilityScore["Wisdom"] = 5] = "Wisdom";
+    AbilityScore[AbilityScore["CHA"] = 6] = "CHA";
     AbilityScore[AbilityScore["Charisma"] = 6] = "Charisma";
 })(AbilityScore || (exports.AbilityScore = AbilityScore = {}));
