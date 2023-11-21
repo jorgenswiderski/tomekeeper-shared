@@ -3,8 +3,15 @@ export interface StaticallyReferenceable {
     toJSON: () => StaticReferenceHandle;
 }
 
-export type StaticReferenceIdentifier = string;
+export enum StaticReferenceIdentifier {
+    Action = 'a',
+    Background = 'b',
+    Characteristic = 'c',
+    EquipmentItem = 'e',
+    Spell = 's',
+    WeaponItem = 'w',
+}
 
 export interface StaticReferenceHandle {
-    ref: StaticReferenceIdentifier;
+    ref: string;
 }

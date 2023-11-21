@@ -6,7 +6,7 @@ import {
 
 export class StaticReference {
     static classes: Record<
-        StaticReferenceIdentifier,
+        string,
         {
             Class: new (...args: any[]) => any;
             // discriminator?: (value: StaticReferenceHandle) => boolean;

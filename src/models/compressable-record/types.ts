@@ -2,6 +2,10 @@ export interface CompressableRecord {
     toJSON: () => CompressableRecordHandle;
 }
 
-export type CompressableRecordIdentifier = number;
+export enum CompressableRecordIdentifier {
+    Action,
+    EquipmentItem,
+    Spell,
+}
 
 export type CompressableRecordHandle = any[];

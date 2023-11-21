@@ -1,6 +1,6 @@
 import { StaticReferenceHandle, StaticReferenceIdentifier, StaticallyReferenceable } from './types';
 export declare class StaticReference {
-    static classes: Record<StaticReferenceIdentifier, {
+    static classes: Record<string, {
         Class: new (...args: any[]) => any;
         pool: Map<number, any>;
         fromId: (id: number) => any;

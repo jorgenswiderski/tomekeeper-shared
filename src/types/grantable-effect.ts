@@ -46,10 +46,11 @@ export enum CharacteristicType {
     ABILITY_FEAT,
 }
 
-export interface Characteristic extends GrantableEffect {
+export interface ICharacteristic extends GrantableEffect {
     type: GrantableEffectType.CHARACTERISTIC;
     subtype?: CharacteristicType;
     values?: any;
+    id: number;
 }
 
 export enum ActionEffectType {
