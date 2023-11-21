@@ -25,4 +25,6 @@ var CharacterPlannerStep;
     CharacterPlannerStep[CharacterPlannerStep["STOP_LEVEL_MANAGEMENT"] = 19] = "STOP_LEVEL_MANAGEMENT";
     CharacterPlannerStep[CharacterPlannerStep["CHANGE_PRIMARY_CLASS"] = 20] = "CHANGE_PRIMARY_CLASS";
     CharacterPlannerStep[CharacterPlannerStep["EQUIP_ITEM"] = 21] = "EQUIP_ITEM";
+    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE"] = 22] = "CLASS_FEATURE";
+    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_SUBCHOICE"] = 23] = "CLASS_FEATURE_SUBCHOICE";
 })(CharacterPlannerStep || (exports.CharacterPlannerStep = CharacterPlannerStep = {}));

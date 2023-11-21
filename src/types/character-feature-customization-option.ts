@@ -29,6 +29,8 @@ export enum CharacterPlannerStep {
     STOP_LEVEL_MANAGEMENT,
     CHANGE_PRIMARY_CLASS,
     EQUIP_ITEM,
+    CLASS_FEATURE,
+    CLASS_FEATURE_SUBCHOICE,
 }
 
 export type ICharacterChoiceWithStubs = {
