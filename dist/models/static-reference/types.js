@@ -5,7 +5,7 @@ var StaticReferenceIdentifier;
 (function (StaticReferenceIdentifier) {
     StaticReferenceIdentifier["Action"] = "a";
     StaticReferenceIdentifier["Background"] = "b";
-    StaticReferenceIdentifier["Characteristic"] = "c";
+    StaticReferenceIdentifier["Passive"] = "c";
     StaticReferenceIdentifier["EquipmentItem"] = "e";
     StaticReferenceIdentifier["Spell"] = "s";
     StaticReferenceIdentifier["WeaponItem"] = "w";

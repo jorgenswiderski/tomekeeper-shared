@@ -1,5 +1,5 @@
 import { StaticallyReferenceable } from '../models/static-reference/types';
-import { IActionEffect, ICharacteristic, GrantableEffect, Proficiency } from './grantable-effect';
+import { IActionEffect, IPassive, GrantableEffect, Proficiency } from './grantable-effect';
 export declare enum CharacterPlannerStep {
     NONE = 0,
     PRIMARY_CLASS = 1,
@@ -44,11 +44,11 @@ interface ICharacterOptionBase {
     type?: CharacterPlannerStep;
 }
 export interface ICharacterOption extends ICharacterOptionBase {
-    grants?: (GrantableEffect | ICharacteristic | IActionEffect | Proficiency)[];
+    grants?: (GrantableEffect | IPassive | IActionEffect | Proficiency)[];
     choices?: ICharacterChoice[];
 }
 export interface ICharacterOptionWithStubs extends ICharacterOptionBase {
-    grants?: (GrantableEffect | ICharacteristic | IActionEffect | Proficiency | StaticallyReferenceable)[];
+    grants?: (GrantableEffect | IPassive | IActionEffect | Proficiency | StaticallyReferenceable)[];
     choices?: ICharacterChoiceWithStubs[];
 }
 export {};

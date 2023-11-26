@@ -1,7 +1,7 @@
 import { StaticallyReferenceable } from '../models/static-reference/types';
 import {
     IActionEffect,
-    ICharacteristic,
+    IPassive,
     GrantableEffect,
     Proficiency,
 } from './grantable-effect';
@@ -54,19 +54,14 @@ interface ICharacterOptionBase {
 }
 
 export interface ICharacterOption extends ICharacterOptionBase {
-    grants?: (
-        | GrantableEffect
-        | ICharacteristic
-        | IActionEffect
-        | Proficiency
-    )[];
+    grants?: (GrantableEffect | IPassive | IActionEffect | Proficiency)[];
     choices?: ICharacterChoice[];
 }
 
 export interface ICharacterOptionWithStubs extends ICharacterOptionBase {
     grants?: (
         | GrantableEffect
-        | ICharacteristic
+        | IPassive
         | IActionEffect
         | Proficiency
         | StaticallyReferenceable

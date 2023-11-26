@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActionEffectType = exports.CharacteristicType = exports.ProficiencyTypes = exports.GrantableEffectType = void 0;
+exports.ActionEffectType = exports.PassiveType = exports.ProficiencyTypes = exports.GrantableEffectType = void 0;
 var GrantableEffectType;
 (function (GrantableEffectType) {
     GrantableEffectType[GrantableEffectType["NONE"] = 0] = "NONE";
     GrantableEffectType[GrantableEffectType["ACTION"] = 1] = "ACTION";
-    GrantableEffectType[GrantableEffectType["CHARACTERISTIC"] = 2] = "CHARACTERISTIC";
+    GrantableEffectType[GrantableEffectType["PASSIVE"] = 2] = "PASSIVE";
     GrantableEffectType[GrantableEffectType["PROFICIENCY"] = 3] = "PROFICIENCY";
 })(GrantableEffectType || (exports.GrantableEffectType = GrantableEffectType = {}));
 var ProficiencyTypes;
@@ -26,13 +26,13 @@ var ProficiencyTypes;
     ProficiencyTypes["SKILL_STEALTH"] = "STEALTH";
     ProficiencyTypes["SKILL_SURVIVAL"] = "SURVIVAL";
 })(ProficiencyTypes || (exports.ProficiencyTypes = ProficiencyTypes = {}));
-var CharacteristicType;
-(function (CharacteristicType) {
-    CharacteristicType[CharacteristicType["EFFECT_NONE"] = 0] = "EFFECT_NONE";
-    CharacteristicType[CharacteristicType["ABILITY_BASE"] = 1] = "ABILITY_BASE";
-    CharacteristicType[CharacteristicType["ABILITY_RACIAL"] = 2] = "ABILITY_RACIAL";
-    CharacteristicType[CharacteristicType["ABILITY_FEAT"] = 3] = "ABILITY_FEAT";
-})(CharacteristicType || (exports.CharacteristicType = CharacteristicType = {}));
+var PassiveType;
+(function (PassiveType) {
+    PassiveType[PassiveType["EFFECT_NONE"] = 0] = "EFFECT_NONE";
+    PassiveType[PassiveType["ABILITY_BASE"] = 1] = "ABILITY_BASE";
+    PassiveType[PassiveType["ABILITY_RACIAL"] = 2] = "ABILITY_RACIAL";
+    PassiveType[PassiveType["ABILITY_FEAT"] = 3] = "ABILITY_FEAT";
+})(PassiveType || (exports.PassiveType = PassiveType = {}));
 var ActionEffectType;
 (function (ActionEffectType) {
     ActionEffectType[ActionEffectType["ACTION_NONE"] = 0] = "ACTION_NONE";

@@ -6,7 +6,7 @@ export interface StaticallyReferenceable {
 export enum StaticReferenceIdentifier {
     Action = 'a',
     Background = 'b',
-    Characteristic = 'c',
+    Passive = 'c',
     EquipmentItem = 'e',
     Spell = 's',
     WeaponItem = 'w',

@@ -1,5 +1,5 @@
 import { IAction, ISpell } from '../../types/action';
-import { ICharacteristic } from '../../types/grantable-effect';
+import { IPassive } from '../../types/grantable-effect';
 import { CompressableRecord } from '../compressable-record/types';
 import { StaticallyReferenceable } from './types';
 
@@ -30,7 +30,5 @@ export type ActionEffectStubConstructor = new (
     action: IAction,
 ) => ActionEffectStub;
 
-interface CharacteristicStub extends StaticallyReferenceable {}
-export type CharacteristicStubConstructor = new (
-    characteristic: ICharacteristic,
-) => CharacteristicStub;
+interface PassiveStub extends StaticallyReferenceable {}
+export type PassiveStubConstructor = new (passive: IPassive) => PassiveStub;

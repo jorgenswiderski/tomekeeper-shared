@@ -3,7 +3,7 @@ import { IAction } from './action';
 export enum GrantableEffectType {
     NONE,
     ACTION,
-    CHARACTERISTIC,
+    PASSIVE,
     PROFICIENCY,
 }
 
@@ -39,16 +39,16 @@ export interface Proficiency extends GrantableEffect {
     proficiency: ProficiencyTypes;
 }
 
-export enum CharacteristicType {
+export enum PassiveType {
     EFFECT_NONE,
     ABILITY_BASE,
     ABILITY_RACIAL,
     ABILITY_FEAT,
 }
 
-export interface ICharacteristic extends GrantableEffect {
-    type: GrantableEffectType.CHARACTERISTIC;
-    subtype?: CharacteristicType;
+export interface IPassive extends GrantableEffect {
+    type: GrantableEffectType.PASSIVE;
+    subtype?: PassiveType;
     values?: any;
     id: number;
 }
