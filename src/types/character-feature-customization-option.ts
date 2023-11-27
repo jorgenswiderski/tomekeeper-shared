@@ -31,6 +31,7 @@ export enum CharacterPlannerStep {
     EQUIP_ITEM,
     CLASS_FEATURE,
     CLASS_FEATURE_SUBCHOICE,
+    CLASS_FEATURE_LEARN_SPELL,
 }
 
 export type ICharacterChoiceWithStubs = {

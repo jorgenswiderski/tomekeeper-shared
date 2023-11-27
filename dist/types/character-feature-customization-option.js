@@ -27,4 +27,5 @@ var CharacterPlannerStep;
     CharacterPlannerStep[CharacterPlannerStep["EQUIP_ITEM"] = 21] = "EQUIP_ITEM";
     CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE"] = 22] = "CLASS_FEATURE";
     CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_SUBCHOICE"] = 23] = "CLASS_FEATURE_SUBCHOICE";
+    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_LEARN_SPELL"] = 24] = "CLASS_FEATURE_LEARN_SPELL";
 })(CharacterPlannerStep || (exports.CharacterPlannerStep = CharacterPlannerStep = {}));
