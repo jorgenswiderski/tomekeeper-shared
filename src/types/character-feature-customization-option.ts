@@ -26,7 +26,6 @@ export enum CharacterPlannerStep {
     REMOVE_LEVEL,
     MANAGE_LEVELS,
     REVISE_LEVEL,
-    STOP_LEVEL_MANAGEMENT,
     CHANGE_PRIMARY_CLASS,
     EQUIP_ITEM,
     CLASS_FEATURE,

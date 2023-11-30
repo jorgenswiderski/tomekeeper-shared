@@ -20,12 +20,11 @@ export declare enum CharacterPlannerStep {
     REMOVE_LEVEL = 16,
     MANAGE_LEVELS = 17,
     REVISE_LEVEL = 18,
-    STOP_LEVEL_MANAGEMENT = 19,
-    CHANGE_PRIMARY_CLASS = 20,
-    EQUIP_ITEM = 21,
-    CLASS_FEATURE = 22,
-    CLASS_FEATURE_SUBCHOICE = 23,
-    CLASS_FEATURE_LEARN_SPELL = 24
+    CHANGE_PRIMARY_CLASS = 19,
+    EQUIP_ITEM = 20,
+    CLASS_FEATURE = 21,
+    CLASS_FEATURE_SUBCHOICE = 22,
+    CLASS_FEATURE_LEARN_SPELL = 23
 }
 export type ICharacterChoiceWithStubs = {
     type: CharacterPlannerStep;
