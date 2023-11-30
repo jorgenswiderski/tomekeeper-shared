@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CharacterPlannerStep = void 0;
+// explicitly set the values, otherwise removing a step could break all the saved builds
 var CharacterPlannerStep;
 (function (CharacterPlannerStep) {
     CharacterPlannerStep[CharacterPlannerStep["NONE"] = 0] = "NONE";
@@ -22,9 +23,10 @@ var CharacterPlannerStep;
     CharacterPlannerStep[CharacterPlannerStep["REMOVE_LEVEL"] = 16] = "REMOVE_LEVEL";
     CharacterPlannerStep[CharacterPlannerStep["MANAGE_LEVELS"] = 17] = "MANAGE_LEVELS";
     CharacterPlannerStep[CharacterPlannerStep["REVISE_LEVEL"] = 18] = "REVISE_LEVEL";
-    CharacterPlannerStep[CharacterPlannerStep["CHANGE_PRIMARY_CLASS"] = 19] = "CHANGE_PRIMARY_CLASS";
-    CharacterPlannerStep[CharacterPlannerStep["EQUIP_ITEM"] = 20] = "EQUIP_ITEM";
-    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE"] = 21] = "CLASS_FEATURE";
-    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_SUBCHOICE"] = 22] = "CLASS_FEATURE_SUBCHOICE";
-    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_LEARN_SPELL"] = 23] = "CLASS_FEATURE_LEARN_SPELL";
+    // STOP_LEVEL_MANAGEMENT = 19,
+    CharacterPlannerStep[CharacterPlannerStep["CHANGE_PRIMARY_CLASS"] = 20] = "CHANGE_PRIMARY_CLASS";
+    CharacterPlannerStep[CharacterPlannerStep["EQUIP_ITEM"] = 21] = "EQUIP_ITEM";
+    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE"] = 22] = "CLASS_FEATURE";
+    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_SUBCHOICE"] = 23] = "CLASS_FEATURE_SUBCHOICE";
+    CharacterPlannerStep[CharacterPlannerStep["CLASS_FEATURE_LEARN_SPELL"] = 24] = "CLASS_FEATURE_LEARN_SPELL";
 })(CharacterPlannerStep || (exports.CharacterPlannerStep = CharacterPlannerStep = {}));
