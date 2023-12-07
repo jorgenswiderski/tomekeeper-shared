@@ -24,7 +24,9 @@ export declare enum CharacterPlannerStep {
     EQUIP_ITEM = 21,
     CLASS_FEATURE = 22,
     CLASS_FEATURE_SUBCHOICE = 23,
-    CLASS_FEATURE_LEARN_SPELL = 24
+    CLASS_FEATURE_LEARN_SPELL = 24,
+    WARLOCK_PACT_BOON = 25,
+    WARLOCK_DEEPENED_PACT = 26
 }
 export type ICharacterChoiceWithStubs = {
     type: CharacterPlannerStep;

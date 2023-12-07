@@ -1,3 +1,4 @@
+import { StaticallyReferenceable } from '../models/static-reference/types';
 import { IAction } from './action';
 
 export enum GrantableEffectType {
@@ -13,7 +14,7 @@ export interface GrantableEffect {
     hidden?: boolean;
     type: GrantableEffectType;
     image?: string;
-    grants?: GrantableEffect[];
+    grants?: (GrantableEffect | StaticallyReferenceable)[];
 }
 
 export enum ProficiencyTypes {
