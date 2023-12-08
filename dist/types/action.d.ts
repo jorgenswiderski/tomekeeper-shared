@@ -126,7 +126,6 @@ export interface IAction extends IActionBase {
 }
 export interface ISpell extends IActionBase {
     classes: string[];
-    noSpellSlot: boolean;
     damageSave?: AbilityScore;
     damageSaveEffect?: ActionDamageSaveEffect;
     damagePer?: string;
