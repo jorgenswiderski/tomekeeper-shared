@@ -189,7 +189,6 @@ export interface ISpell extends IActionBase {
     damagePer?: string;
     higherLevels?: string;
     variants?: ISpell[];
-    isVariant: boolean;
 }
 
 export enum ActionSchool {
