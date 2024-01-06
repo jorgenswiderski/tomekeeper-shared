@@ -13,6 +13,7 @@ export interface GrantableEffect {
     type: GrantableEffectType;
     image?: string;
     grants?: (GrantableEffect | StaticallyReferenceable)[];
+    id?: number;
 }
 export declare enum ProficiencyTypes {
     SKILL_ACROBATICS = "ACROBATICS",
@@ -34,6 +35,7 @@ export declare enum ProficiencyTypes {
 export interface Proficiency extends GrantableEffect {
     type: GrantableEffectType.PROFICIENCY;
     proficiency: ProficiencyTypes;
+    id?: undefined;
 }
 export declare enum PassiveType {
     EFFECT_NONE = 0,

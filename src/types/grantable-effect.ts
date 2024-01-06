@@ -15,6 +15,7 @@ export interface GrantableEffect {
     type: GrantableEffectType;
     image?: string;
     grants?: (GrantableEffect | StaticallyReferenceable)[];
+    id?: number;
 }
 
 export enum ProficiencyTypes {
@@ -38,6 +39,7 @@ export enum ProficiencyTypes {
 export interface Proficiency extends GrantableEffect {
     type: GrantableEffectType.PROFICIENCY;
     proficiency: ProficiencyTypes;
+    id?: undefined;
 }
 
 export enum PassiveType {

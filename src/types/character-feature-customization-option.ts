@@ -55,6 +55,7 @@ interface ICharacterOptionBase {
     description?: string;
     image?: string;
     type?: CharacterPlannerStep;
+    id?: number;
 }
 
 export interface ICharacterOption extends ICharacterOptionBase {
